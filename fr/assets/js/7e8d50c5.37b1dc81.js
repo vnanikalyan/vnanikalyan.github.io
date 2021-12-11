@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvnanikalyan_github_io=self.webpackChunkvnanikalyan_github_io||[]).push([[8738],{6672:function(a){a.exports=JSON.parse('{"allTagsPath":"/fr/blog/tags","slug":"/fr/blog/tags/philosophy","name":"Philosophy","count":1,"permalink":"/fr/blog/tags/philosophy"}')}}]);
