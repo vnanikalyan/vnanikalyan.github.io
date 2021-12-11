@@ -1,0 +1,31 @@
+---
+slug: random-writings
+title: Random Writings
+authors: [vnk]
+tags: [Wisdom, Random, Philosophy]
+---
+
+We are inventing new stuff so that we will have more time?
+
+What we will do with more time? Again invent? Or Rich becoming richer.
+
+What's the point of invention? To understand the world better and use the things that are there in the nature
+- Waves
+- Light etc
+
+Anyways we are all gonna die one day or the other then what's the point of invention? To become inter-planetary species?
+
+Even on another planet, we will die for sure. What if we came for a cure for death. Living forever and storing a humongous amount of data in our brain. what is the point of living forever.
+
+To enjoy pleasures. All pleasures will eventually lose pleasure, particularly for an individual.
+
+Then what's the point of 
+	1) Invention 
+	2) Living forever 
+	3) Having More time...
+
+Do What you like? Is that the solution?
+If everybody wants to do what they like then there would be chaos.
+We invent to avoid chaos and bring order.
+
+There is order all around us in Nature. Planetary motions, light speed, seasons, etc.

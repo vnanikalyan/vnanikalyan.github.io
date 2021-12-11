@@ -1,0 +1,70 @@
+---
+slug: flutter-firestore
+title: Flutter Firestore CRUD
+authors: [vnk]
+tags: [Flutter, Firestore]
+---
+
+## CRUD Firestore (Flutter - Dart)
+
+### Retrieve
+When you want to retrieve data based on ___CollectionName___ and ___DocumentName___
+```jsx
+Future<Map> getData(<CollectionName>, <DocumentName>) async {
+    var x = await Firestore.instance.collection(<CollectionName>)
+                  .document(<DocumentName>).get()
+                  .then((document){
+                                    //return document.data;
+                                    return document;
+                                  });
+
+    print('Data : ${x.data}');
+    return x.data;
+}
+```
+
+When you want to retrieve data based on ___CollectionName___ and ___FieldName___
+```jsx
+Future<List> getEvents(context, CollectionName, FieldName) async {
+    var x = await Firestore.instance.collection(CollectionName).where(FieldName, isEqualTo: state.churchId).getDocuments();
+    int length = x.documents.length;
+    List list = new List(length);
+    
+    for(int i=0; i<length; i++){
+        List[i] = x.documents[i].data
+    }
+    return list;
+}
+```
+
+### Create
+Add data when ___CollectionName___ is given
+```jsx
+await Firestore.instance.collection(<CollectionName>)
+                .document()
+                .setData({'key_1': value_1,
+                          'key_2': value_2,
+                          'key_3': value_3
+                        });
+```
+
+Add data when ___Collection Name___ and ___DocumentName___ are given
+```jsx
+await Firestore.instance.collection(<CollectionName>)
+                .document(<DocumentName>)
+                .setData({'key_1': value_1,
+                          'key_2': value_2,
+                          'key_3': value_3
+                         });
+```
+
+### Update
+Update data when ___CollectionName___ and ___DocumentName___ are given
+```jsx
+await Firestore.instance.collection(<CollectionName>)
+                .document(<DocumentName>)
+                .updateData({'key_1': value_1,
+                             'key_2': value_2,
+                             'key_3': value_3
+                            });
+```
