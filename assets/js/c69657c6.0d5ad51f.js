@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvnanikalyan_github_io=self.webpackChunkvnanikalyan_github_io||[]).push([[6830],{2602:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/facts","name":"facts","count":1,"permalink":"/blog/tags/facts"}')}}]);
