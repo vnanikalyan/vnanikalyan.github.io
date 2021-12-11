@@ -13,8 +13,9 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'https://avatars.githubusercontent.com/u/16670359?v=4',
-  organizationName: 'vnanikalyan', // Usually your GitHub org/user name.
-  projectName: 'mylearnings', // Usually your repo name.
+  organizationName: 'vnklearnings', // Usually your GitHub org/user name.
+  projectName: 'vnklearnings', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
 
   presets: [
     [
@@ -117,13 +118,28 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} vnk-learnings.`,
+        copyright: `Copyright © ${new Date().getFullYear()} vnklearnings.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme        
       },
     }),
+
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+      fr: {
+        label: 'Français',
+        direction: 'ltr',
+      },
+    },
+  }
 };
 
 module.exports = config;
