@@ -11,7 +11,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="oopsjs" label="Oops in JS" default>  
+  <TabItem value="oopsjs" label="Oops in JS">  
 
 I learnt it from - [youtube link](https://www.youtube.com/watch?v=PFmuCDHHpwk&ab_channel=ProgrammingwithMosh)
 
@@ -103,7 +103,7 @@ It has the information of which function created it.
 In Constructor function  
 If you want a property value to set/get from outside
 
-	function nani() {
+		function nani() {
 		let x = 5;
 		Object.defineProperty(this, x, {
 			get: function() {
@@ -116,9 +116,51 @@ If you want a property value to set/get from outside
 		}
   </TabItem>
 
-  <TabItem value="arrays" label="Array Funcs">
-    Array Functions
-  </TabItem>  
+  <TabItem value="arrays" label="Array Funcs" default>
 
+Array Methods  
+- REDUCE- has return type  
+- FILTER- has return type  
+- MAP- has return type  
+- FOREACH- no return type  
+- EVERY- has return type
+
+***REDUCE***  
+
+***find the sum of the given numbers array***  
+```js const numbers = [1, -1, 2, 3];
+
+//This is what I generally do
+for(const i of numbers)
+	sum += i;
+
+console.log(sum);
+```
+
+**Array.reduce**
+ - We use this when we want to reduce an array to a single value
+ - Single value can be a   
+ 	  i) Number  
+ 	 ii) String  
+ 	iii) Object
+ - returns the final Value
+
+```js
+ /*Reduce will take two params
+ 1) Callback 
+ 		- accumulator: result will be stored in accumulator 
+		 	- It is like Sum in my way of coding
+ 		- currentValue: Index Value
+ 2) Initial value of accumulator. In our case we initalized it to zero. 
+ If you remove the initialization value then it will be initialized to the first element in the array, 
+ here in our case it is 1.*/
+
+ const sum = numbers.reduce((accumulator, currentValue)=>{
+ 	return accumulator + currentValue;
+ }, 0);
+```
+ 
+
+  </TabItem>  
   
 </Tabs>
