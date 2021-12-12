@@ -9,9 +9,11 @@ As a technology enthusiast, I always keep myself updated with cutting-edge techn
 
 #### Current working Stack  
 **React-JS**  
+- Development
 - Unit Tests (Jest and Enzyme)   
 
 **Node-JS** running on *AWS* Lambdas   
+- Development 
 - Unit Tests (Jest)  
 
 **Jenkins** Build System  

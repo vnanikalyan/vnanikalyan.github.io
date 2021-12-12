@@ -11,9 +11,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="oopsjs" label="Oops in JS">  
-
-I learnt it from - [youtube link](https://www.youtube.com/watch?v=PFmuCDHHpwk&ab_channel=ProgrammingwithMosh)
+  <TabItem value="oopsjs" label="Oops in JS" default>  
 
 ***OOPS*** - It is a paradigm, programming style rather than a programming language.  
 Programming languages that use OOPS  
@@ -114,18 +112,23 @@ If you want a property value to set/get from outside
 			}
 		})
 		}
+
+**References**
+- [youtube link](https://www.youtube.com/watch?v=PFmuCDHHpwk&ab_channel=ProgrammingwithMosh)
+
+
   </TabItem>
 
-  <TabItem value="arrays" label="Array Funcs" default>
+  <TabItem value="arrays" label="Array Funcs">
 
 Array Methods  
-- REDUCE- has return type  
-- FILTER- has return type  
-- MAP- has return type  
-- FOREACH- no return type  
-- EVERY- has return type
+- **REDUCE**- has return type - *returns a single value* 
+- **FILTER**- has return type - *returns a new array*  
+- **MAP**- has return type  
+- **FOREACH**- no return type  
+- **EVERY**- has return type
 
-***REDUCE***  
+### REDUCE
 
 ***find the sum of the given numbers array***  
 ```js const numbers = [1, -1, 2, 3];
@@ -160,7 +163,44 @@ console.log(sum);
  }, 0);
 ```
  
+### FILTER
+```js
+ //Array.filter
+ const numbers = [1, -1, 2, 3];
 
+ //To filter only positive numbers from the Array
+ //returns a new Array
+
+ numbers.filter((value)=>{
+ 	return value >= 0;
+ });
+```
+
+### MAP
+Array.Map  
+- to map each element to something  
+- returns a new Array
+```js
+const numbers = [1,2,3,4,5];
+
+const newArr = numbers.map(value => {
+	return value + 1
+})
+console.log(newArr)
+```
+
+
+### FOREACH
+- calls once for each element in the array .for each element in the array.  
+- It doesn't have a return type  
+```js
+let txt = "";
+let numbers = [45, 4, 9, 16, 25];
+
+numbers.forEach((value)=>{
+	txt = txt + value + "<br>";
+});
+```
   </TabItem>  
   
 </Tabs>
