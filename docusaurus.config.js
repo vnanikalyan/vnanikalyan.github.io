@@ -30,10 +30,15 @@ const config = {
         blog: {          
           blogTitle: 'vnk learnings',
           blogDescription: 'This blog is the collection of my thoughts',
-          showReadingTime: true,
-          // Please change this to your repo.
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All posts',
+          showReadingTime: true,          
           editUrl:
             'https://vnanikalyan.github.io/blog',
+          feedOptions: {
+              type: 'all',
+              copyright: `Copyright © ${new Date().getFullYear()} vnklearnings`,
+          }
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -52,14 +57,13 @@ const config = {
           src: 'https://avatars.githubusercontent.com/u/16670359?v=4',
         },
         items: [
-          /*{
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },*/
           //{to: '/blog', label: 'Blog', position: 'left'},
-          {to: '/nodejs', label: 'NodeJs', position: 'right'},
+          {
+            type: 'doc',
+            docId: 'NodeJs/oops-in-js',
+            position: 'right',
+            label: 'NodeJs',
+          },            
           {to: '/flutter-firestore', label: 'flutter-firestore', position: 'right'},
           {to: '/reactjs', label: 'React', position: 'right'},
           {to: '/aws', label: 'AWS', position: 'right'},          
@@ -74,15 +78,15 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          /*{
+          {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'NodeJs',
+                to: '/docs/NodeJs/oops-in-js',
               },
             ],
-          },*/
+          },
           {
             title: 'Community',
             items: [
