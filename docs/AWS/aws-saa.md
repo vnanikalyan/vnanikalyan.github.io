@@ -1,15 +1,11 @@
 ---
-title: React Js
+slug: aws-saa
+id: aws-saa
+title: Solutions Architect Certificate
+authors: [vnk]
+tags: [AWS, SAA, AWS Certification]
 ---
 
-# AWS
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-  <TabItem value="solutionsarchitect" label="AWS SAA">  
-  
   The following are the steps I took to crack the Amazon Solutions Architect - Associate Exam.
 
   Check out my credential [AWS solutions architect associate](https://vnkcertifications.s3.ap-south-1.amazonaws.com/AWS+Certified+Solutions+Architect+-+Associate+certificate.pdf).
@@ -38,10 +34,3 @@ import TabItem from '@theme/TabItem';
 
 4) Watch 
 - AWS training videos
-
-
-
-
- </TabItem>  
-  
-</Tabs>

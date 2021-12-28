@@ -27,7 +27,7 @@ const config = {
           // Please change this to your repo.
           editUrl: 'https://vnanikalyan.github.io/docs',
         },
-        blog: {          
+        blog: {    
           blogTitle: 'vnk learnings',
           blogDescription: 'This blog is the collection of my thoughts',
           blogSidebarCount: 'ALL',
@@ -42,7 +42,7 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
-        },
+        }
       }),
     ],
   ],
@@ -63,10 +63,15 @@ const config = {
             docId: 'NodeJs/oops-in-js',
             position: 'right',
             label: 'NodeJs',
-          },            
+          },  
           {to: '/flutter-firestore', label: 'flutter-firestore', position: 'right'},
-          {to: '/reactjs', label: 'React', position: 'right'},
-          {to: '/aws', label: 'AWS', position: 'right'},          
+          {to: '/reactjs', label: 'React', position: 'right'},          
+          {
+            type: 'doc',
+            docId: 'AWS/aws-saa',
+            position: 'right',
+            label: 'AWS',
+          },
           {to: '/about', label: 'About', position: 'right'},
           {
             href: 'https://github.com/vnanikalyan',
@@ -85,6 +90,10 @@ const config = {
                 label: 'NodeJs',
                 to: '/docs/NodeJs/oops-in-js',
               },
+              {
+                label: 'AWS',
+                to: '/docs/AWS/aws-saa',
+              }
             ],
           },
           {
