@@ -19,7 +19,7 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 
 Resources:
-  NangTestVnk:
+  TestTestVnk:
       Type: AWS::Serverless::Function
       Properties:
         FunctionName: 'testvnk-lambda'
