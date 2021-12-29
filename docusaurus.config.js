@@ -64,14 +64,14 @@ const config = {
             position: 'right',
             label: 'NodeJs',
           },  
-          {to: '/flutter-firestore', label: 'flutter-firestore', position: 'right'},
-          {to: '/reactjs', label: 'React', position: 'right'},          
           {
             type: 'doc',
             docId: 'AWS/aws-saa',
             position: 'right',
             label: 'AWS',
           },
+          {to: '/flutter-firestore', label: 'flutter-firestore', position: 'right'},
+          {to: '/reactjs', label: 'React', position: 'right'},          
           {to: '/about', label: 'About', position: 'right'},
           {
             href: 'https://github.com/vnanikalyan',
