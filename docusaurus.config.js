@@ -34,7 +34,7 @@ const config = {
              },
              { 
               label: 'Theology',
-              to: 'theology-blog'
+              to: '/'
              }
           ],
           position: 'left'
@@ -179,23 +179,7 @@ const config = {
         }
       }*/
     ]
-  ],  
-
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-    localeConfigs: {
-      en: {
-        label: 'English',
-        direction: 'ltr',
-      },
-      fr: {
-        label: 'Français',
-        direction: 'ltr',
-      },
-    },
-  }
-
+  ]
 };
 
 module.exports = config;
