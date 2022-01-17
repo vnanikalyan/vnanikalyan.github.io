@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkvnanikalyan_github_io=self.webpackChunkvnanikalyan_github_io||[]).push([[1672],{9871:function(a){a.exports=JSON.parse('{"allTagsPath":"/fr/blog/tags","slug":"/fr/blog/tags/freecharge","name":"freecharge","count":1,"permalink":"/fr/blog/tags/freecharge"}')}}]);
