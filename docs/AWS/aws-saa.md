@@ -4,6 +4,7 @@ id: aws-saa
 title: Solutions Architect Certificate
 authors: [vnk]
 tags: [AWS, SAA, AWS Certification]
+custom_edit_url: null
 ---
 
   The following are the steps I took to crack the Amazon Solutions Architect - Associate Exam.

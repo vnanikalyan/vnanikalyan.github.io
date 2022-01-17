@@ -4,6 +4,7 @@ id: node-oracle-db
 title: Node Oracle DB
 authors: [vnk]
 tags: [NodeJs, Oracle, Database, Javascript]
+custom_edit_url: null
 ---
 *Step 1:* Install OracleDB Package
 > npm i oracledb

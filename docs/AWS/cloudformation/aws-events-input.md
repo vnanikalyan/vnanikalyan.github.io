@@ -4,6 +4,7 @@ id: aws-events-input
 title: AWS Events - Input parameter
 authors: [vnk]
 tags: [AWS, SAA, AWS Certification]
+custom_edit_url: null
 ---
 
 #### AWS CF Script To trigger a lambda based on Cron expression with **input values**

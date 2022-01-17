@@ -4,6 +4,7 @@ id: oops-in-js
 title: Oops in JS
 authors: [vnk]
 tags: [NodeJs, oops, Javascript]
+custom_edit_url: null
 ---
 
 ***OOPS*** - It is a paradigm, programming style rather than a programming language.  
