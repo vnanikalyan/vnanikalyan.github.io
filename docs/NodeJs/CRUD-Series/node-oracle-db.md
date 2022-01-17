@@ -52,12 +52,13 @@ async select(user) {
                          WHERE email = '${user.email}'`
     try {
       console.log(getSqlQuery)
-      const result = await connection.execute(getSqlQuery, {}, this.options)
-      await connection.close()
+      const result = await connection.execute(getSqlQuery, {}, this.options)      
       return result.rows
     } catch (error) {
       console.log(error)
       throw new Error(error)
+    } finally {
+      await connection.close()
     }
 }
 ```
@@ -90,8 +91,7 @@ async insert(user) {
                                 )`
     try {
       console.log(insertSqlQuery)
-      const result = await connection.execute(insertSqlQuery, binds, opts)
-      await connection.close()
+      const result = await connection.execute(insertSqlQuery, binds, opts)     
       if (result.rowsAffected === 1) {
         return `${user.email} creation successfull!`
       } else {
@@ -100,6 +100,8 @@ async insert(user) {
     } catch (error) {
       console.log(error)
       throw new Error(error)
+    } finally {
+      await connection.close()
     }
 }
 ```
@@ -121,8 +123,7 @@ async update(user) {
                             WHERE email = '${user.email}'`
     try {
       console.log(updateSqlQuery)
-      const result = await connection.execute(updateSqlQuery, {}, opts)
-      await connection.close()
+      const result = await connection.execute(updateSqlQuery, {}, opts)      
       if (result.rowsAffected === 1) {
         return `${user.email} status is updated successfully!`
       } else {
@@ -131,6 +132,8 @@ async update(user) {
     } catch (error) {
       console.log(error)
       throw new Error(error)
+    } finally {
+       await connection.close()
     }
 ```
 
@@ -150,12 +153,13 @@ async delete(user) {
     const updateSqlQuery = 'DELETE FROM dummyusertable WHERE modified_timestamp <= TRUNC(SYSDATE) - 30'
     try {
       console.log(updateSqlQuery)
-      const result = await connection.execute(updateSqlQuery, {}, opts)
-      await connection.close()
+      const result = await connection.execute(updateSqlQuery, {}, opts)      
       return result
     } catch (error) {
       console.log(error)
       throw new Error(error)
+    } finally {
+      await connection.close()
     }
   }
 }
