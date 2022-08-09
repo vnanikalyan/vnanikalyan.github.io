@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvnanikalyan_github_io=self.webpackChunkvnanikalyan_github_io||[]).push([[4741],{2833:a=>{a.exports=JSON.parse('{"label":"freecharge","permalink":"/general-blog/tags/freecharge","allTagsPath":"/general-blog/tags","count":1}')}}]);

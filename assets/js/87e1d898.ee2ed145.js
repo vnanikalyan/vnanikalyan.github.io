@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvnanikalyan_github_io=self.webpackChunkvnanikalyan_github_io||[]).push([[1809],{3956:e=>{e.exports=JSON.parse('{"permalink":"/general-blog/tags/money","page":1,"postsPerPage":2,"totalPages":1,"totalCount":1,"blogDescription":"This blog is the collection of General Philosophy","blogTitle":"General Philosophy"}')}}]);

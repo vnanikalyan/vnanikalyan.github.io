@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkvnanikalyan_github_io=self.webpackChunkvnanikalyan_github_io||[]).push([[1198],{5570:function(a){a.exports=JSON.parse('{"allTagsPath":"/general-blog/tags","slug":"/general-blog/tags/life","name":"life","count":1,"permalink":"/general-blog/tags/life"}')}}]);

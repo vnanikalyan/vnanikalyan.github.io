@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkvnanikalyan_github_io=self.webpackChunkvnanikalyan_github_io||[]).push([[2200],{6424:function(e){e.exports=JSON.parse('{"allTagsPath":"/general-blog/tags","slug":"/general-blog/tags/welcome","name":"welcome","count":1,"permalink":"/general-blog/tags/welcome"}')}}]);
