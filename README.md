@@ -1,7 +1,8 @@
-# This is vnk/my Learnings
+## This is vnk/my Learnings
 
-The content on this website is my learnings as a freelancer, software developer to senior software developer.
-I used to write my learnings on documents.
+The contents on this website are my learnings as a 
+- freelancer,
+- software developer to senior software developer.
 
-To refer them has become cumbersome. Thought of putting all of them on a website so that referring would be easy and might help other
-developers out there. 
+Previously, I used to write my learnings on documents. Referring them when needed has become cumbersome. So, I thought of putting all of them on a website so that referring would be easy and might help other
+developers out there including the future me.

@@ -115,7 +115,7 @@ const config = {
       copyright: `Copyright © ${new Date().getFullYear()} vnklearnings.`,
     },
     prism: {
-      theme: lightCodeTheme,
+      //theme: lightCodeTheme,
       darkTheme: darkCodeTheme        
     },
   },
@@ -124,9 +124,9 @@ const config = {
     [
       '@docusaurus/theme-classic',
       {
-        theme: {
+        /*theme: {
           customCss: require.resolve('./src/css/custom.css'),
-        }
+        }*/
       }
     ],
     [

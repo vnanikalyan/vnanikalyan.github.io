@@ -6,19 +6,27 @@ authors: [vnk]
 tags: [NodeJs, Oracle, Database, Javascript]
 custom_edit_url: null
 ---
-*Step 1:* Install OracleDB Package
-> npm i oracledb
+##### Step 1: 
+Install OracleDB Package
+```bash
+$ npm i oracledb
+```
 
-*Step 2:* A basic oracle client should be installed on your machine.  
+#### Step 2: 
+A basic oracle client should be installed on your machine.  
    Download it from here [Oracle Client](https://www.oracle.com/uk/database/technologies/instant-client/downloads.html)
 
 *For Windows Machine* - Place the extracted files in the following path of nodejs code   
+```diff
 > node_modules/oracledb/build/Release/  
+```
 
 *For Linux Machine* - Place the extracted files in the lib folder in root path
+```diff
 > /lib  
+```
 
-### Sample CrudOperations Class that uses oracledb
+### Sample CrudOperations Class
 ```js
 //The CRUD operations on a dummy user table
 const oracledb = require('oracledb')
@@ -38,7 +46,7 @@ class CrudOperations {
 }
 ```
 
-### Retreive
+### Retrieve
 ```js
 const oracledb = require('oracledb')
 

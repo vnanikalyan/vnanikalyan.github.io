@@ -7,15 +7,17 @@ tags: [AWS, SAA, AWS Certification]
 custom_edit_url: null
 ---
 
-#### AWS CF Script To trigger a lambda based on Cron expression with **input values**
+#### AWS CF Script to trigger a lambda based on CRON expression with _input values_
 
 We are able to give either of two values to Schedule Property
-- rate(5 minutes) or rate(1 hour) etc
-- cron Expression
+>
+> 1. rate(5 minutes) or rate(1 hour) etc
+> 2. cron Expression
+>
 
-And the Input property will take only a string. If we want to send multiple key value pairs then convert that JSON to String and give it as a value to the Input parameter
+And the Input property will take only a string. If we want to send multiple key value pairs then convert that JSON to String and give it as a value to the Input parameter.
 
-```
+```bash
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 
@@ -48,11 +50,10 @@ Resources:
               Input: "{\"job\": \"cleanup\", \"table\": \"dummy\"}"
 ```
 
-The lambda will receive Input string as an object.  
-Based on the received object you can write your own logic
+The lambda will receive Input string as an object. Based on the received object you can write your own logic.
 
 
-```js
+```javascript
 exports.handler = function(event, context, callback){
     console.log('EVENT - ', event)
     callback(null, event);

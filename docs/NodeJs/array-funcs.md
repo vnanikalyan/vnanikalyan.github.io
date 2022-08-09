@@ -16,7 +16,7 @@ Array Methods
 
 ### REDUCE
 
-***find the sum of the given numbers array***  
+#### find the sum of the given numbers array
 ```js const numbers = [1, -1, 2, 3];
 
 //This is what I generally do
