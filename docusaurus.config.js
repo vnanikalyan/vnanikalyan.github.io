@@ -51,8 +51,13 @@ const config = {
           position: 'right',
           label: 'AWS',
         },
-        {to: '/flutter-firestore', label: 'flutter-firestore', position: 'right'},
-        {to: '/reactjs', label: 'React', position: 'right'},          
+        {to: '/flutter-firestore', label: 'flutter-firestore', position: 'right'},        
+        {
+          type: 'doc',
+          docId: 'Hyperledger/set-up',
+          position: 'right',
+          label: 'Hyperledger',
+        },
         {to: '/about', label: 'About', position: 'right'},
         {
           href: 'https://github.com/vnanikalyan',
@@ -74,6 +79,10 @@ const config = {
             {
               label: 'AWS',
               to: '/docs/AWS/aws-saa',
+            },
+            {
+              label: 'Hyperledger',
+              to: '/docs/HyperLedger/set-up',
             }
           ],
         },
