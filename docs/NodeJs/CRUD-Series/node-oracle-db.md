@@ -66,7 +66,13 @@ async select(user) {
       console.log(error)
       throw new Error(error)
     } finally {
-      await connection.close()
+       try {
+        if(connection) {
+          await connection.close()
+        }
+       } catch(err) {
+          console.log(err.message)
+       }
     }
 }
 ```
@@ -109,7 +115,13 @@ async insert(user) {
       console.log(error)
       throw new Error(error)
     } finally {
-      await connection.close()
+       try {
+        if(connection) {
+          await connection.close()
+        }
+       } catch(err) {
+          console.log(err.message)
+       }
     }
 }
 ```
@@ -141,7 +153,13 @@ async update(user) {
       console.log(error)
       throw new Error(error)
     } finally {
-       await connection.close()
+       try {
+        if(connection) {
+          await connection.close()
+        }
+       } catch(err) {
+          console.log(err.message)
+       }
     }
 ```
 
@@ -167,8 +185,163 @@ async delete(user) {
       console.log(error)
       throw new Error(error)
     } finally {
-      await connection.close()
+       try {
+        if(connection) {
+          await connection.close()
+        }
+       } catch(err) {
+          console.log(err.message)
+       }
     }
   }
 }
+```
+
+
+### Insert (Outbinds)
+```js
+const oracledb = require('oracledb')
+
+async insert(user) {
+	const connection = await oracledb.getConnection({
+      user: this.username,
+      password: this.password,
+      connectString: this.connectionString
+    })
+  
+  const options = {
+    autoCommit = true	
+  }
+  
+	const binds = {
+    user_id_out: {
+
+    }
+  }
+	
+	const insertSqlQuery = `INSERT INTO dummyusertable(
+                                  FIRST_NAME,
+                                  LAST_NAME,
+                                  EMAIL,
+								  MODIFIED_TIMESTAMP
+                                ) 
+                                VALUES(
+                                  '${user.first_name}',
+                                  '${user.last_name}',
+                                  '${user.email}',                                  
+                                  SYSDATE                                  
+                                ) returning USER_ID to :user_id_out`
+    try {
+      console.log(insertSqlQuery)
+      const result = await connection.execute(insertSqlQuery, binds, options)     
+      console.log('Result - ', result)
+
+      return result.outbinds.user_id_out[0]
+    } catch (error) {
+      console.log(error)
+      throw new Error(error)
+    } finally {
+       try {
+        if(connection) {
+          await connection.close()
+        }
+       } catch(err) {
+          console.log(err.message)
+       }
+    }
+}
+```
+
+### Insert Many
+```js
+const oracledb = require('oracledb')
+
+async insert(user) {
+	const connection = await oracledb.getConnection({
+      user: this.username,
+      password: this.password,
+      connectString: this.connectionString
+    })
+  
+  const options = {
+    autoCommit: true,
+    batchError: true
+  }
+  
+	const insertBinds = []
+	
+	const insertSqlQuery = `INSERT INTO dummyusertable(
+                                  FIRST_NAME,
+                                  LAST_NAME,
+                                  EMAIL,
+								  MODIFIED_TIMESTAMP
+                                ) 
+                                VALUES(
+                                  '${user.first_name}',
+                                  '${user.last_name}',
+                                  '${user.email}',                                  
+                                  SYSDATE                                  
+                                ) returning USER_ID to :user_id_out`
+    try {
+      console.log(insertSqlQuery)
+      const result = await connection.executeMany(insertSqlQuery, insertBinds, options)
+      console.log('Result - ', result)
+
+      return result.outbinds.user_id_out[0]
+    } catch (error) {
+      console.log(error)
+      throw new Error(error)
+    } finally {
+       try {
+        if(connection) {
+          await connection.close()
+        }
+       } catch(err) {
+          console.log(err.message)
+       }
+    }
+}
+```
+
+### Update Many
+```js
+const oracledb = require('oracledb')
+
+async update(user) {
+	  const connection = await oracledb.getConnection({
+      user: this.username,
+      password: this.password,
+      connectString: this.connectionString
+    })
+
+    const options = {
+      autoCommit = true
+    }
+
+    const updateBinds = []
+    
+
+    const updateSqlQuery = `UPDATE dummyusertable SET first_name = 'asdf'
+                            WHERE email = '${user.email}'`
+    try {
+      console.log(updateSqlQuery)
+      const result = await connection.executeMany(updateSqlQuery, updateBinds, options)
+      
+      if (result.rowsAffected === 1) {
+        return `${user.email} status is updated successfully!`
+      } else {
+        throw new Error('Unable to update the status!')
+      }
+    } catch (error) {
+      console.log(error)
+      throw new Error(error)
+    } finally {
+       try {
+        if(connection) {
+          await connection.close()
+        }
+       } catch(err) {
+          console.log(err.message)
+       }
+    }
 ```
