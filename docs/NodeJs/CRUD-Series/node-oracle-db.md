@@ -198,45 +198,56 @@ async delete(user) {
 ```
 
 
-### Insert (Outbinds)
+### Insert Many
 ```js
 const oracledb = require('oracledb')
 
-async insert(user) {
+async insert(users) {
 	const connection = await oracledb.getConnection({
       user: this.username,
       password: this.password,
       connectString: this.connectionString
     })
-  
-  const options = {
-    autoCommit = true	
+
+  const insertbinds = []
+  //Here we are trying to insert multiple users with one insert statement
+  for(const i of users) {
+    insertBinds.push({
+      firstName: i.firstName,
+      lastName: i.lastName,
+      email: i.email
+    })
   }
   
-	const binds = {
-    user_id_out: {
-
-    }
+  const insertOptions = {
+    autoCommit = true,
+    batchErrors: true,
+    outFormat: oracledb.OUT_FORMAT_OBJECT,
+    binddefs: {
+      firstName: {type: oracledb.STRING, maxSize: 30}, // {type: oracledb.NUMBER}
+      lastName: {type: oracledb.STRING, maxSize: 30},
+      email: {type: oracledb.STRING, maxSize: 30}
+    }    
   }
 	
 	const insertSqlQuery = `INSERT INTO dummyusertable(
                                   FIRST_NAME,
                                   LAST_NAME,
                                   EMAIL,
-								  MODIFIED_TIMESTAMP
+								                  MODIFIED_TIMESTAMP
                                 ) 
                                 VALUES(
-                                  '${user.first_name}',
-                                  '${user.last_name}',
-                                  '${user.email}',                                  
+                                  :firstName,
+                                  :lastName,
+                                  :email,
                                   SYSDATE                                  
-                                ) returning USER_ID to :user_id_out`
+                                )`
     try {
       console.log(insertSqlQuery)
-      const result = await connection.execute(insertSqlQuery, binds, options)     
+      const result = await connection.executeMany(insertSqlQuery, binds, options)
       console.log('Result - ', result)
 
-      return result.outbinds.user_id_out[0]
+      return result.rows
     } catch (error) {
       console.log(error)
       throw new Error(error)
@@ -252,7 +263,7 @@ async insert(user) {
 }
 ```
 
-### Insert Many
+### Insert (OutBinds)
 ```js
 const oracledb = require('oracledb')
 
@@ -263,12 +274,14 @@ async insert(user) {
       connectString: this.connectionString
     })
   
-  const options = {
-    autoCommit: true,
-    batchError: true
+  const binds = { // we can get the userId upon insertion of the data
+    user_id_out: {
+      type: oracledb.NUMBER,
+      dir: oracledb.BIND_OUT
+    }
   }
   
-	const insertBinds = []
+	const options = { autoCommit: true }
 	
 	const insertSqlQuery = `INSERT INTO dummyusertable(
                                   FIRST_NAME,
@@ -281,10 +294,10 @@ async insert(user) {
                                   '${user.last_name}',
                                   '${user.email}',                                  
                                   SYSDATE                                  
-                                ) returning USER_ID to :user_id_out`
+                                ) returning USER_ID into :user_id_out`
     try {
       console.log(insertSqlQuery)
-      const result = await connection.executeMany(insertSqlQuery, insertBinds, options)
+      const result = await connection.execute(insertSqlQuery, insertBinds, options)
       console.log('Result - ', result)
 
       return result.outbinds.user_id_out[0]
@@ -314,24 +327,34 @@ async update(user) {
       connectString: this.connectionString
     })
 
-    const options = {
-      autoCommit = true
+    const updateBinds = []
+    //Here we are trying to insert multiple users with one insert statement
+    for(const i of users) {
+      insertBinds.push({
+        firstName: i.firstName,        
+        email: i.email
+      })
+    }
+    
+    const updateOptions = {
+      autoCommit = true,
+      batchErrors: true,
+      outFormat: oracledb.OUT_FORMAT_OBJECT,
+      binddefs: {
+        firstName: {type: oracledb.STRING, maxSize: 30}, // {type: oracledb.NUMBER}        
+        email: {type: oracledb.STRING, maxSize: 30}
+      }    
     }
 
-    const updateBinds = []
-    
-
-    const updateSqlQuery = `UPDATE dummyusertable SET first_name = 'asdf'
-                            WHERE email = '${user.email}'`
+    const updateSqlQuery = `UPDATE dummyusertable 
+                            SET first_name = :firstName
+                            WHERE email = :email`
     try {
       console.log(updateSqlQuery)
       const result = await connection.executeMany(updateSqlQuery, updateBinds, options)
       
-      if (result.rowsAffected === 1) {
-        return `${user.email} status is updated successfully!`
-      } else {
-        throw new Error('Unable to update the status!')
-      }
+      console.log('Result - ', result)
+      return result
     } catch (error) {
       console.log(error)
       throw new Error(error)
