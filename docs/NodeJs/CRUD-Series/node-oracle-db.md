@@ -328,9 +328,9 @@ async update(user) {
     })
 
     const updateBinds = []
-    //Here we are trying to insert multiple users with one insert statement
+    //Here we are trying to update multiple users with one update statement
     for(const i of users) {
-      insertBinds.push({
+      updateBinds.push({
         firstName: i.firstName,        
         email: i.email
       })
