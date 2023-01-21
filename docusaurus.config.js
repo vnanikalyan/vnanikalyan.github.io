@@ -50,6 +50,12 @@ const config = {
           docId: 'Containers/container-basics',
           position: 'right',
           label: 'Containers',
+        },
+        {
+          type: 'doc',
+          docId: 'Linux/linux-fundamentals',
+          position: 'right',
+          label: 'Linux',
         },  
         {
           type: 'doc',
@@ -85,6 +91,10 @@ const config = {
             {
               label: 'Containers',
               to: '/docs/Containers/container-basics',
+            },
+            {
+              label: 'Linux',
+              to: '/docs/Linux/linux-fundamentals',
             },
             {
               label: 'AWS',

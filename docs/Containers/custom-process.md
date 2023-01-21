@@ -1,7 +1,7 @@
 ---
 slug: container custom process
 id: container-custom-process
-title: Container Custom Process
+title: Custom Process
 authors: [vnk]
 tags: [Containers, Docker, Podman, Kernel]
 custom_edit_url: null

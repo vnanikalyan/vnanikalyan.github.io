@@ -9,7 +9,13 @@ const sidebars = {
   },
   containers: {
     'Basics': ['Containers/container-basics'],
-    'Custom Process': ['Containers/container-custom-process']
+    'Custom Process': ['Containers/container-custom-process'],
+    'Kubernetes': ['Containers/Kubernetes/kubernetes-jargon']
+  },
+  linux: {
+    'Basics': ['Linux/linux-fundamentals'],
+    'Hacking': ['Linux/hacking-tools']
+    
   },
   aws: {
     'SAA Certification': ['AWS/aws-saa'],
