@@ -44,6 +44,12 @@ const config = {
           docId: 'NodeJs/oops-in-js',
           position: 'right',
           label: 'NodeJs',
+        },
+        {
+          type: 'doc',
+          docId: 'Containers/container-basics',
+          position: 'right',
+          label: 'Containers',
         },  
         {
           type: 'doc',
@@ -75,6 +81,10 @@ const config = {
             {
               label: 'NodeJs',
               to: '/docs/NodeJs/oops-in-js',
+            },
+            {
+              label: 'Containers',
+              to: '/docs/Containers/container-basics',
             },
             {
               label: 'AWS',

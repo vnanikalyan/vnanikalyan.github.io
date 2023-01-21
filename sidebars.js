@@ -7,7 +7,11 @@ const sidebars = {
     'Getting started': ['NodeJs/oops-in-js','NodeJs/array-funcs'],
     'CRUD Series': ['NodeJs/CRUD-Series/node-mongo-db', 'NodeJs/CRUD-Series/node-mysql-db', 'NodeJs/CRUD-Series/node-oracle-db']
   },
-  aws: {    
+  containers: {
+    'Basics': ['Containers/container-basics'],
+    'Custom Process': ['Containers/container-custom-process']
+  },
+  aws: {
     'SAA Certification': ['AWS/aws-saa'],
     'Cloudformation': ['AWS/cloudformation/aws-events-input']
   }
