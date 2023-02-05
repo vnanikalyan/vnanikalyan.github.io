@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const config = {
   baseUrl: '/',
-  title: 'vnk learnings',
-  tagline: 'Constant Learner',
+  title: 'My Learnings',
+  tagline: 'Node.Js, AWS Services',
   url: 'https://vnanikalyan.github.io',  
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -31,11 +31,11 @@ const config = {
             { 
               label: 'General',
               to: 'general-blog'
-             },
+             }/*,
              { 
               label: 'Theology',
               to: '/'
-             }
+             } */
           ],
           position: 'left'
         },        
