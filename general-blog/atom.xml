@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://vnanikalyan.github.io/general-blog</id>
-    <title>vnk learnings Blog</title>
-    <updated>2023-01-21T16:40:59.000Z</updated>
+    <title>My Learnings Blog</title>
+    <updated>2023-02-05T17:52:04.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://vnanikalyan.github.io/general-blog"/>
-    <subtitle>vnk learnings Blog</subtitle>
+    <subtitle>My Learnings Blog</subtitle>
     <icon>https://vnanikalyan.github.io/https://avatars.githubusercontent.com/u/16670359?v=4</icon>
     <rights>Copyright © 2023 vnklearnings</rights>
     <entry>
         <title type="html"><![CDATA[Money]]></title>
-        <id>view-on-money</id>
+        <id>https://vnanikalyan.github.io/general-blog/view-on-money</id>
         <link href="https://vnanikalyan.github.io/general-blog/view-on-money"/>
-        <updated>2023-01-21T16:40:59.000Z</updated>
+        <updated>2023-02-05T17:52:04.000Z</updated>
         <summary type="html"><![CDATA[Prosperity Consciousness Vs Poverty consciousness.]]></summary>
         <content type="html"><![CDATA[<p>Prosperity Consciousness Vs Poverty consciousness.  </p><p>Money is a Good Servant but a Bad Master.</p><p><strong>George Bernard Shaw</strong>  </p><ul><li>It is the duty of every person to be rich  </li><li>It is a sin to be poor</li></ul><p>Natural Laws (Divine Laws)<br>
 <!-- -->1) <strong><em>Everything moves</em></strong>  </p><ul><li>Moving forward or backward  </li><li>Grow or Die  </li><li>Becoming richer or poorer</li></ul><p>2) <strong><em>Sowing and Reaping</em></strong>  </p><ul><li>Thoughts,  </li><li>emotions,  </li><li>feelings
@@ -28,7 +28,7 @@ I = Income</p><p>Financial Goals</p><div class="codeBlockContainer_Ckt0 theme-co
     </entry>
     <entry>
         <title type="html"><![CDATA[Wise words by Kunal Shah]]></title>
-        <id>kunal-shah-wise-words</id>
+        <id>https://vnanikalyan.github.io/general-blog/kunal-shah-wise-words</id>
         <link href="https://vnanikalyan.github.io/general-blog/kunal-shah-wise-words"/>
         <updated>2021-12-13T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Money]]></summary>
@@ -54,7 +54,7 @@ only 24 hours.</p><p>Two transactions</p><ul><li><p><strong>Boring Transactions<
     </entry>
     <entry>
         <title type="html"><![CDATA[Life Facts]]></title>
-        <id>social-media-facts</id>
+        <id>https://vnanikalyan.github.io/general-blog/social-media-facts</id>
         <link href="https://vnanikalyan.github.io/general-blog/social-media-facts"/>
         <updated>2021-12-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Social Media]]></summary>
@@ -73,7 +73,7 @@ only 24 hours.</p><p>Two transactions</p><ul><li><p><strong>Boring Transactions<
     </entry>
     <entry>
         <title type="html"><![CDATA[welcome]]></title>
-        <id>welcome</id>
+        <id>https://vnanikalyan.github.io/general-blog/welcome</id>
         <link href="https://vnanikalyan.github.io/general-blog/welcome"/>
         <updated>2021-12-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The content of this blog is the collection of general philosophy/views of those who are successful Enterpreneurs! on]]></summary>
