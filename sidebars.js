@@ -7,6 +7,10 @@ const sidebars = {
     'Getting started': ['NodeJs/oops-in-js','NodeJs/array-funcs'],
     'CRUD Series': ['NodeJs/CRUD-Series/node-mongo-db', 'NodeJs/CRUD-Series/node-mysql-db', 'NodeJs/CRUD-Series/node-oracle-db']
   },
+  devops: {
+    'Github Actions': ['Devops/githubactions/github-actions-java-8', 'Devops/githubactions/github-actions-node-16'],
+    'Dockerfiles': ['Devops/dockerfiles/docker-files-java', 'Devops/dockerfiles/docker-files-node']
+  },
   containers: {
     'Basics': ['Containers/container-basics'],
     'Custom Process': ['Containers/container-custom-process'],

@@ -4,17 +4,25 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const config = {
-  baseUrl: '/',
-  title: 'My Learnings',
-  tagline: 'Node.Js, AWS Services',
+const config = {  
+  title: 'Stay Curious!',
+  tagline: 'Technology is cool . . .',
+  favicon: 'https://avatars.githubusercontent.com/u/16670359?v=4',
+
   url: 'https://vnanikalyan.github.io',  
+  baseUrl: '/',
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'https://avatars.githubusercontent.com/u/16670359?v=4',
+  
   organizationName: 'vnklearnings', // Usually your GitHub org/user name.
   projectName: 'vnklearnings', // Usually your repo name.
   deploymentBranch: 'gh-pages',
+
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
   
   themeConfig: {
     navbar: {
@@ -44,6 +52,12 @@ const config = {
           docId: 'NodeJs/oops-in-js',
           position: 'right',
           label: 'NodeJs',
+        },
+        {
+          type: 'doc',
+          docId: 'Devops/githubactions/github-actions-java-8',
+          position: 'right',
+          label: 'Devops',
         },
         {
           type: 'doc',
@@ -88,6 +102,10 @@ const config = {
               label: 'NodeJs',
               to: '/docs/NodeJs/oops-in-js',
             },
+            /*{
+              label: 'Devops',
+              to: '/docs/Devops/githubactions/java-8',
+            },*/
             {
               label: 'Containers',
               to: '/docs/Containers/container-basics',
