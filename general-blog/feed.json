@@ -1,8 +1,8 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "My Learnings Blog",
+    "title": "Stay Curious! Blog",
     "home_page_url": "https://vnanikalyan.github.io/general-blog",
-    "description": "My Learnings Blog",
+    "description": "Stay Curious! Blog",
     "items": [
         {
             "id": "https://vnanikalyan.github.io/general-blog/view-on-money",
@@ -10,7 +10,7 @@
             "url": "https://vnanikalyan.github.io/general-blog/view-on-money",
             "title": "Money",
             "summary": "Prosperity Consciousness Vs Poverty consciousness.",
-            "date_modified": "2023-02-05T17:52:04.000Z",
+            "date_modified": "2023-04-10T16:54:33.000Z",
             "author": {
                 "name": "Nani Kalyan",
                 "url": "https://vnanikalyan.github.io"
