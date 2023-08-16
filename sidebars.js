@@ -5,10 +5,11 @@ const sidebars = {
   // But you can create a sidebar manually  
   mySidebar: {    
     'Getting started': ['NodeJs/oops-in-js','NodeJs/array-funcs'],
-    'CRUD Series': ['NodeJs/CRUD-Series/node-mongo-db', 'NodeJs/CRUD-Series/node-mysql-db', 'NodeJs/CRUD-Series/node-oracle-db']
+    'CRUD Series': ['NodeJs/CRUD-Series/node-mongo-db', 'NodeJs/CRUD-Series/node-mysql-db', 'NodeJs/CRUD-Series/node-oracle-db'],
+    'Multi-Threading': ['NodeJs/Multi-Threading/Intro']
   },
   devops: {
-    'Github Actions': ['Devops/githubactions/github-actions-java-8', 'Devops/githubactions/github-actions-node-16'],
+    'Github Actions': ['Devops/githubactions/github-actions-java-8', 'Devops/githubactions/github-actions-node-18'],
     'Dockerfiles': ['Devops/dockerfiles/docker-files-java', 'Devops/dockerfiles/docker-files-node']
   },
   containers: {

@@ -1,7 +1,7 @@
 ---
 slug: github-actions
-id: github-actions-node-16
-title: node
+id: github-actions-node-18
+title: node-18
 authors: [vnk]
 tags: [Github Actions, Devops]
 custom_edit_url: null
@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
       - run: npm install --legacy-peer-deps
       - run: npm run build
 
