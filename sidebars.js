@@ -6,7 +6,8 @@ const sidebars = {
   mySidebar: {    
     'Getting started': ['NodeJs/oops-in-js','NodeJs/array-funcs'],
     'CRUD Series': ['NodeJs/CRUD-Series/node-mongo-db', 'NodeJs/CRUD-Series/node-mysql-db', 'NodeJs/CRUD-Series/node-oracle-db'],
-    'Multi-Threading': ['NodeJs/Multi-Threading/Intro']
+    'Multi-Threading': ['NodeJs/Multi-Threading/Intro'],
+    'Jest': ['NodeJs/unit-tests-jest'],
   },
   devops: {
     'Github Actions': ['Devops/githubactions/github-actions-java-8', 'Devops/githubactions/github-actions-node-18'],
