@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkvnanikalyan_github_io=self.webpackChunkvnanikalyan_github_io||[]).push([[1198],{5570:a=>{a.exports=JSON.parse('{"label":"life","permalink":"/general-blog/tags/life","allTagsPath":"/general-blog/tags","count":1}')}}]);
